@@ -11,7 +11,7 @@ struct vec2i
 		x = y = 0;
 	};
 
-	vec2i(int _x, int _y) 
+	vec2i(const int& _x,const int& _y) 
 	{
 		x = _x;
 		y = _y;
@@ -33,7 +33,7 @@ public:
 		m_position(vec2i(0,0)), m_size(vec2i(defaultSize, defaultSize))
 	{
 	}
-	UIBase(vec2i _position,vec2i _size):
+	UIBase(const vec2i& _position,const vec2i& _size):
 		m_position(_position),m_size(_size)
 	{
 	}
@@ -45,7 +45,7 @@ public:
 	* UIの位置を設定する
 	* 引数：設定するwidth,height
 	*/
-	void SetPosition(vec2i _position)
+	void SetPosition(const vec2i& _position)
 	{
 		m_position = _position;
 	}
@@ -63,7 +63,7 @@ public:
 	 * UIのサイズを設定する
 	 * 引数：設定するwidth,height
 	 */
-	void SetSize(vec2i _newSize)
+	void SetSize(const vec2i& _newSize)
 	{
 		m_size = _newSize;
 	}

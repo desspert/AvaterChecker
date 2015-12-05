@@ -14,7 +14,7 @@ public:
 	 * インスタンス生成時に、変更前と変更後の画像と、変更するRawSpriteの参照を得る
 	 */
 	ChangeGraphButton(const vec2i& _position,const vec2i& _size,
-		int _grapHandle, int _refChangedGraphHandle,
+		const int& _grapHandle, const int& _refChangedGraphHandle,
 		RawSprite& _changingSprite);
 	~ChangeGraphButton();
 

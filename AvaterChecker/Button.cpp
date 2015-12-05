@@ -2,7 +2,7 @@
 #include "DxLib.h"
 
 
-ButtonBase::ButtonBase(vec2i _position, vec2i _size, int _grapHandle):
+ButtonBase::ButtonBase(const vec2i& _position, const vec2i& _size, int _grapHandle):
 	RawSprite(_position, _size, _grapHandle)
 {
 }
@@ -15,7 +15,7 @@ ButtonBase::~ButtonBase()
 
 
 
-bool ButtonBase::OnMousePoint()
+bool ButtonBase::OnMousePoint()const
 {
 	int mouseX, mouseY;
 

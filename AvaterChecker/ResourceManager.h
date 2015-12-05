@@ -39,7 +39,7 @@ public:
 	/**
 	 * ‚·‚Å‚É“o˜^‚µ‚½‰æ‘œ‚ğ“o˜^‚Ì–¼‘O‚Åæ“¾‚·‚é
 	 */
-	int GetGraphicByName(std::string searchName)
+	int GetGraphicByName(std::string searchName) const
 	{
 		if (m_graphicList.empty())
 		{
@@ -62,7 +62,7 @@ public:
 	 * ˆø”‚PF“o˜^‚·‚é–¼‘O(std::string)
 	 * ˆø”‚QF“o˜^‚·‚éƒŠƒ\[ƒX‚Ì‚ ‚éƒpƒX
 	 */
-	void RegisterResource(std::string _name, std::string _path)
+	void RegisterResource(const std::string& _name,const std::string& _path)
 	{
 
 		if (m_graphicList.find(_name) != m_graphicList.end())

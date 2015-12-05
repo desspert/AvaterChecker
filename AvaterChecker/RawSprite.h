@@ -11,7 +11,7 @@
 class RawSprite : public UIBase
 {
 public:
-	explicit RawSprite(vec2i _position,vec2i _size, int _grapHandle);
+	explicit RawSprite(const vec2i& _position, const vec2i& _size,const int& _grapHandle);
 	~RawSprite();
 
 
@@ -19,7 +19,7 @@ public:
 	 * 描画する画像を設定する
 	 * 引数：変更する画像のハンドル
 	 */
-	void SetGraph(int _graphHandle);
+	void SetGraph(const int& _graphHandle);
 
 	/**
 	 * 描画する画像を取得する
@@ -39,6 +39,5 @@ protected:
 
 	//! ResourceManagerから画像のハンドルを得る
 	int m_graphic;
-private:
 };
 

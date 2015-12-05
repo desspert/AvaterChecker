@@ -2,7 +2,7 @@
 
 #include "DxLib.h"
 
-ChangeGraphButton::ChangeGraphButton(const vec2i& _position, const vec2i& _size, int _grapHandle,int _changedGraphHandle,RawSprite& _changingSprite):
+ChangeGraphButton::ChangeGraphButton(const vec2i& _position, const vec2i& _size, const int& _grapHandle,const int& _changedGraphHandle,RawSprite& _changingSprite):
 	ButtonBase(_position, _size, _grapHandle),
 	m_originGraphic(_grapHandle),
 	m_changedGraphic(_changedGraphHandle),

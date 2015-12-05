@@ -2,7 +2,7 @@
 #include "DxLib.h"
 #include <assert.h>
 
-RawSprite::RawSprite(vec2i _position, vec2i _size, int _grapHandle):
+RawSprite::RawSprite(const vec2i& _position,const vec2i& _size,const int& _grapHandle):
 	UIBase::UIBase(_position,_size),m_graphic(_grapHandle)
 {
 }
@@ -12,7 +12,7 @@ RawSprite::~RawSprite()
 {
 }
 
-void RawSprite::SetGraph(int _graphHandle)
+void RawSprite::SetGraph(const int& _graphHandle)
 {
 	m_graphic = _graphHandle;
 }

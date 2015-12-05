@@ -9,14 +9,11 @@
 class ButtonBase : public RawSprite
 {
 public:
-	ButtonBase(vec2i _position, vec2i _size, int _grapHandle);
+	ButtonBase(const vec2i& _position, const vec2i& _size, int _grapHandle);
 	~ButtonBase();
 
-	virtual void Update() {};
-	virtual void Render() 
-	{
-		RawSprite::Render();
-	}
+	virtual void Update() {}
+	virtual void Render() {}
 
 
 protected:
@@ -25,13 +22,13 @@ protected:
 	 * マウスが自身の範囲内にいるかどうかを判断する
 	 * 戻り値：true...範囲内（オンカーソル false...範囲外
 	 */
-	bool OnMousePoint();
+	bool OnMousePoint() const;
 
 
 	/**
 	 * 固有の挙動を記述する
 	 */
-	virtual void RunEvent() = 0;
+	virtual void RunEvent() = 0 ;
 
 };
 
